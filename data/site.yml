@@ -28,12 +28,12 @@ hero:
     dark:
       - src: ./assets/img/hero/dark/1.jpg
         position: center 65%
-      - src: ./assets/img/hero/dark/2.jpg
-        position: center 63%
       - src: ./assets/img/hero/dark/3.jpg
         position: center 78%
       - src: ./assets/img/hero/dark/4.jpg
         position: center 70%
+      - src: ./assets/img/hero/dark/2.jpg
+        position: center 63%
       - src: ./assets/img/hero/dark/5.jpg
         position: center 53%
 
