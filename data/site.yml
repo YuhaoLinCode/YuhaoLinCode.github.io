@@ -10,12 +10,12 @@ navigation:
   - id: honors
     label: Honors
 hero:
-  image: ./assets/img/hero/light/1.png
+  image: ./assets/img/hero/light/1.jpg
   backgrounds:
     light:
       - src: ./assets/img/hero/light/0.jpg
         position: center 60%
-      - src: ./assets/img/hero/light/1.png
+      - src: ./assets/img/hero/light/1.jpg
         position: center center
       - src: ./assets/img/hero/light/5.jpg
         position: center 60%
