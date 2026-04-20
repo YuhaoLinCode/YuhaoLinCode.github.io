@@ -6,6 +6,18 @@
   <title>Yuhao Lin</title>
   <meta name="description" content="Yuhao Lin (林宇浩) — Master's student at iSEE Lab, Sun Yat-sen University. Research in Embodied AI and Robotics.">
   <link rel="icon" type="image/png" href="./assets/img/icon.png">
+  <script>
+    (function(){
+      try {
+        var v = localStorage.getItem('theme_visited');
+        var c = localStorage.getItem('theme_choice');
+        var sysDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (v && (c === 'dark' || (!c && sysDark))) {
+          document.documentElement.classList.add('theme-dark');
+        }
+      } catch(_) {}
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">

@@ -30,6 +30,25 @@
   function toggleTheme() {
     const nextMode = document.body.classList.contains('dark') ? 'light' : 'dark';
     applyTheme(nextMode);
+    try { localStorage.setItem('theme_choice', nextMode); } catch (_) {}
+  }
+
+  // Priority 1: first visit → light (default, do nothing)
+  // Priority 2: user has explicit choice → apply it
+  // Priority 3: return visit, no choice → follow system
+  var visited = null, choice = null;
+  try {
+    visited = localStorage.getItem('theme_visited');
+    choice = localStorage.getItem('theme_choice');
+  } catch (_) {}
+
+  if (!visited) {
+    // First visit: mark as visited, stay in light mode
+    try { localStorage.setItem('theme_visited', '1'); } catch (_) {}
+  } else if (choice) {
+    applyTheme(choice);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    applyTheme('dark');
   }
 
   document.addEventListener('DOMContentLoaded', function () {
