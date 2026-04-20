@@ -164,7 +164,7 @@
     let dotPill = null;
     let pillReady = false;
     let autoTimer = null;
-    const AUTO_INTERVAL = 6000;
+    const AUTO_INTERVAL = 12000;
 
     function getMode() {
       return root.classList.contains('theme-dark') ? 'dark' : 'light';
