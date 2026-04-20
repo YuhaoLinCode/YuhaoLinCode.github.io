@@ -4,7 +4,7 @@ conference:
     venue: Conference on Robot Learning
     short_venue: CoRL 2025
     year: 2025
-    image: ./assets/img/publications/typetele.png
+    image: ./assets/img/publications/typetele.jpg
     video: ./assets/video/publications/typetele.mp4
     summary: A novel task enables robots to perform dexterous grasping based on human commands.
     abs: https://arxiv.org/abs/2507.01857
@@ -17,7 +17,7 @@ conference:
     venue: IEEE/CVF Conference on Computer Vision and Pattern Recognition
     short_venue: CVPR 2026 Highlight
     year: 2026
-    image: ./assets/img/publications/cyclemanip.png
+    image: ./assets/img/publications/cyclemanip.jpg
     video: ./assets/video/publications/cyclemanip.mp4
     summary: Achieving cyclic manipulation tasks in an end-to-end imitation manner, without relying on auxiliary models or incurring heavy computational overhead.
     abs: https://arxiv.org/abs/2512.01022
@@ -30,7 +30,7 @@ conference:
     venue: IEEE International Conference on Robotics and Automation
     short_venue: ICRA 2026
     year: 2026
-    image: ./assets/img/publications/omnidex.png
+    image: ./assets/img/publications/omnidex.jpg
     video: ./assets/video/publications/omnidex.mp4
     summary: A generalizable dexterous framework that achieves omni-capabilities in user prompting, dexterous embodiment, and grasping tasks.
     abs: https://arxiv.org/abs/2510.23119
@@ -43,7 +43,7 @@ conference:
     venue: IEEE/CVF International Conference on Computer Vision
     short_venue: ICCV 2025
     year: 2025
-    image: ./assets/img/publications/afforddex_image.png
+    image: ./assets/img/publications/afforddex_image.jpg
     video: ./assets/video/publications/affordex.mp4
     summary: Open-Set Language-guided dexterous grasp based on generalizable-instructive Affordance.
     abs: https://arxiv.org/abs/2503.07360
@@ -54,7 +54,7 @@ conference:
     venue: arXiv
     short_venue: arXiv 2026
     year: 2026
-    image: ./assets/img/publications/bidexgrasp1.png
+    image: ./assets/img/publications/bidexgrasp1.jpg
     video: ./assets/video/publications/bidexgrasp.mp4
     summary: A large-scale bimanual dexterous grasping dataset and a geometry-size-adaptive grasping generation model.
     abs: https://arxiv.org/abs/2604.06589
@@ -65,7 +65,7 @@ conference:
     venue: IEEE/RSJ International Conference on Intelligent Robots and Systems
     short_venue: IROS 2025
     year: 2025
-    image: ./assets/img/publications/taccap_image.png
+    image: ./assets/img/publications/taccap_image.jpg
     video: ./assets/video/publications/taccap.mp4
     summary: A wearable FBG-Based tactile sensor which can transfered form human to robot.
     abs: https://arxiv.org/abs/2503.01789
