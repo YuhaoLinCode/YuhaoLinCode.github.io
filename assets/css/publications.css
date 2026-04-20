@@ -1,0 +1,165 @@
+.publication-groups {
+  display: block;
+}
+
+.publication-list {
+  list-style: none;
+  display: grid;
+  gap: 1.1rem;
+}
+
+.publication-item {
+  display: grid;
+  grid-template-columns: minmax(12.5rem, 34%) minmax(0, 1fr);
+  align-items: center;
+  gap: 0.95rem;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface-strong);
+  box-shadow: none;
+}
+
+.publication-item.is-selected {
+  border-color: var(--accent-border);
+}
+
+.publication-media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 9.2rem;
+  max-height: 13.5rem;
+  height: 100%;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  background: transparent;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.publication-media img,
+.publication-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pub-video {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.publication-media.is-playing .pub-video {
+  opacity: 1;
+}
+
+.publication-content {
+  min-width: 0;
+  align-self: center;
+}
+
+.publication-topline {
+  display: block;
+}
+
+.publication-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.publication-title a {
+  color: var(--text);
+}
+
+.publication-title a:hover {
+  color: var(--accent-strong);
+}
+
+.publication-authors,
+.publication-venue,
+.publication-summary {
+  margin-top: 0.3rem;
+}
+
+.publication-authors,
+.publication-venue {
+  font-size: 0.88rem;
+}
+
+.publication-venue {
+  font-style: italic;
+}
+
+.author-highlight {
+  color: var(--text);
+  font-weight: 900;
+}
+
+.author-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+  text-decoration-color: currentColor;
+  transition: color 140ms ease;
+}
+
+.author-link:hover {
+  color: var(--accent-strong);
+  text-decoration-style: solid;
+}
+
+.publication-venue-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.45rem;
+  padding: 0.08rem 0.42rem;
+  border: 1px solid var(--accent-border);
+  border-radius: 0.35rem;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: 0.08em;
+}
+
+.publication-summary {
+  max-width: 48rem;
+  font-size: 0.9rem;
+}
+
+.publication-actions {
+  margin-top: 0.6rem;
+}
+
+@media (max-width: 760px) {
+  .publication-item {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-media {
+    max-width: none;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-height: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .publication-item {
+    padding: 0.8rem;
+  }
+}
