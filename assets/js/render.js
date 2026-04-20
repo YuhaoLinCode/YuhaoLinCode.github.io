@@ -199,7 +199,7 @@
     function setLayerBg(layer, entry) {
       layer.style.backgroundImage = 'url("' + resolveUrl(entry.src) + '")';
       layer.style.backgroundPosition = entry.position || 'center center';
-      layer.style.backgroundSize = entry.size || '100% auto';
+      layer.style.backgroundSize = entry.size || 'cover';
     }
 
     function movePillTo(idx) {
