@@ -165,6 +165,20 @@
     let pillReady = false;
     let autoTimer = null;
     const AUTO_INTERVAL = 12000;
+    const preloadedSrcs = new Set();
+    let advancePending = false;
+
+    function preloadImage(url) {
+      return new Promise(function (resolve) {
+        if (preloadedSrcs.has(url)) { resolve(); return; }
+        const img = new Image();
+        img.onload = img.onerror = function () {
+          preloadedSrcs.add(url);
+          resolve();
+        };
+        img.src = url;
+      });
+    }
 
     function getMode() {
       return root.classList.contains('theme-dark') ? 'dark' : 'light';
@@ -247,20 +261,26 @@
       }
       controls.hidden = false;
 
-      entries.forEach(function (_, index) {
+      entries.forEach(function (entry, index) {
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'hero-background-dot';
         btn.setAttribute('aria-label', 'Show background ' + (index + 1));
         btn.setAttribute('aria-pressed', String(index === activeIndices[mode]));
         btn.addEventListener('click', function () {
-          if (index === activeIndices[mode]) {
-            return;
-          }
+          if (index === activeIndices[mode]) return;
           const dir = index > activeIndices[mode] ? 1 : -1;
-          activeIndices[mode] = index;
-          applyBackground(mode, dir);
-          resetAuto();
+          const clickUrl = resolveUrl(entry.src);
+          function doApply() {
+            activeIndices[mode] = index;
+            applyBackground(mode, dir);
+            resetAuto();
+          }
+          if (preloadedSrcs.has(clickUrl)) {
+            doApply();
+          } else {
+            preloadImage(clickUrl).then(doApply);
+          }
         });
         controls.appendChild(btn);
         dotButtons.push(btn);
@@ -282,14 +302,24 @@
     }
 
     function advance() {
+      if (advancePending) return;
       const mode = getMode();
       const entries = getEntries(mode);
-      if (entries.length < 2) {
-        return;
-      }
+      if (entries.length < 2) return;
       const nextIdx = (activeIndices[mode] + 1) % entries.length;
-      activeIndices[mode] = nextIdx;
-      applyBackground(mode, 1);
+      const nextUrl = resolveUrl(entries[nextIdx].src);
+      if (preloadedSrcs.has(nextUrl)) {
+        activeIndices[mode] = nextIdx;
+        applyBackground(mode, 1);
+      } else {
+        advancePending = true;
+        preloadImage(nextUrl).then(function () {
+          advancePending = false;
+          activeIndices[mode] = nextIdx;
+          applyBackground(mode, 1);
+          resetAuto();
+        });
+      }
     }
 
     function startAuto() {
@@ -312,12 +342,19 @@
     const initEntries = getEntries(initMode);
     if (initEntries.length) {
       setLayerBg(bgA, initEntries[0]);
+      preloadedSrcs.add(resolveUrl(initEntries[0].src));
       bgA.style.transform = 'translateX(0)';
       bgB.style.transform = 'translateX(100%)';
     }
 
     renderDots(initMode);
     startAuto();
+
+    function preloadOthers() {
+      backgroundSets.light.concat(backgroundSets.dark).forEach(function (entry) {
+        if (entry.src) preloadImage(resolveUrl(entry.src));
+      });
+    }
 
     document.addEventListener('homepage:theme-change', function (event) {
       const mode = (event.detail && event.detail.mode) || getMode();
@@ -332,6 +369,8 @@
       setLayerBg(activeLayer, entries[idx]);
       renderDots(mode);
     });
+
+    return preloadOthers;
   }
 
   function renderHero(site) {
@@ -347,7 +386,7 @@
     setText('hero-name', name);
     setText('hero-role', title + affiliation);
 
-    createBackgroundController(root, hero);
+    const preloadOthers = createBackgroundController(root, hero);
 
     const avatar = byId('hero-avatar');
     if (avatar && hero.avatar) {
@@ -368,6 +407,8 @@
         actionRow.appendChild(createLink(item.label, item.href, 'button-link ' + variant));
       });
     }
+
+    return preloadOthers;
   }
 
   function renderAbout(site) {
@@ -732,7 +773,7 @@
       ]);
 
       renderNavigation(site);
-      renderHero(site);
+      const preloadBgOthers = renderHero(site);
       renderAbout(site);
       renderPublications(site, publications);
       renderHonors(site);
@@ -740,6 +781,7 @@
       hideStatus();
       initVideoAutoplay();
       document.dispatchEvent(new Event('homepage:content-ready'));
+      if (typeof preloadBgOthers === 'function') preloadBgOthers();
     } catch (error) {
       console.error(error);
       showStatus('Failed to load the homepage data. Start a local static server in /Users/lin/Desktop/code/personal_page/homepage and check that the YAML files are reachable.');
