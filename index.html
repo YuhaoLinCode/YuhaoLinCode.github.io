@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yuhao Lin</title>
+  <meta name="description" content="Yuhao Lin (林宇浩) — Master's student at iSEE Lab, Sun Yat-sen University. Research in Embodied AI and Robotics.">
+  <link rel="icon" type="image/png" href="./assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/theme.css">
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/publications.css">
+  <script defer src="./assets/vendor/js-yaml.min.js"></script>
+  <script defer src="./assets/js/theme.js"></script>
+  <script defer src="./assets/js/navigation.js"></script>
+  <script defer src="./assets/js/render.js"></script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="site-shell nav-shell">
+      <a class="brand" href="#hero" id="brand-link" aria-label="Jump to hero section">
+        <span class="brand-text" id="brand-text">Your Name</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-panel" id="nav-panel">
+        <nav class="site-nav" aria-label="Primary navigation">
+          <div class="site-nav-links" id="site-nav-links"></div>
+        </nav>
+
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="theme-toggle-icon" id="theme-toggle-icon" aria-hidden="true">◐</span>
+          <span class="theme-toggle-label" id="theme-toggle-label">Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <noscript>
+    <div class="status-banner status-banner-visible">
+      This homepage loads its content from YAML files with JavaScript. Enable JavaScript and preview it from a local static server.
+    </div>
+  </noscript>
+
+  <div class="status-banner" id="page-status" hidden></div>
+
+  <main>
+    <section class="hero-section" id="hero" data-section>
+      <div class="hero-bg" id="hero-bg-a"></div>
+      <div class="hero-bg" id="hero-bg-b"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-background-controls" id="hero-background-controls" aria-label="Hero background options"></div>
+      <div class="site-shell hero-inner">
+        <p class="hero-kicker" id="hero-eyebrow" hidden></p>
+        <h1 class="hero-title" id="hero-name">Your Name</h1>
+        <p class="hero-role" id="hero-role" hidden></p>
+      </div>
+    </section>
+
+    <section class="content-section" id="about" data-section>
+      <div class="site-shell content-shell about-shell">
+        <div class="about-main">
+          <div class="section-heading">
+            <h2 class="section-title" id="about-heading">About</h2>
+          </div>
+
+          <div class="about-copy">
+            <div class="rich-copy" id="about-body"></div>
+            <div class="action-row about-actions" id="hero-actions"></div>
+          </div>
+        </div>
+
+        <div class="portrait-wrap" aria-hidden="true">
+          <div class="portrait-card">
+            <img id="hero-avatar" src="./assets/img/personal-picture.jpg" alt="Yuhao Lin">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section section-tint" id="publications" data-section>
+      <div class="site-shell content-shell wide-content-shell">
+        <div class="section-heading">
+          <h2 class="section-title" id="publications-heading">Publications</h2>
+        </div>
+
+        <div class="publication-groups" id="publication-groups"></div>
+      </div>
+    </section>
+
+    <section class="content-section" id="honors" data-section>
+      <div class="site-shell content-shell">
+        <div class="section-heading">
+          <h2 class="section-title" id="honors-heading">Honors</h2>
+        </div>
+
+        <ol class="honor-list" id="honor-list"></ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell content-shell footer-grid">
+      <div class="footer-copy-block">
+        <p class="footer-title" id="footer-title">Your Name</p>
+        <p class="footer-note" id="footer-note">Built as a clean single-page academic homepage.</p>
+      </div>
+
+      <div class="footer-links" id="footer-links"></div>
+      <p class="footer-meta" id="footer-copy"></p>
+    </div>
+  </footer>
+</body>
+</html>

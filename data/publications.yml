@@ -1,0 +1,76 @@
+conference:
+  - title: "TypeTele: Releasing Dexterity in Teleoperation by Dexterous Manipulation Types"
+    authors: Yuhao Lin*, Yi-Lin Wei*, Haoran Liao, Mu Lin, Chengyi Xing, Hao Li, Dandan Zhang, Mark Cutkosky, Wei-Shi Zheng
+    venue: Conference on Robot Learning
+    short_venue: CoRL 2025
+    year: 2025
+    image: ./assets/img/publications/typetele.png
+    video: ./assets/video/publications/typetele.mp4
+    summary: A novel task enables robots to perform dexterous grasping based on human commands.
+    abs: https://arxiv.org/abs/2507.01857
+    pdf: https://arxiv.org/pdf/2507.01857
+    page: https://isee-laboratory.github.io/TypeTele/
+    code: https://github.com/iSEE-Laboratory/TypeTele
+    selected: true
+  - title: "CycleManip: Enabling Cycle-based Manipulation via Effective History Perception and Understanding"
+    authors: Yi-Lin Wei*, Haoran Liao*, Yuhao Lin, Pengyue Wang, Zhizhao Liang, Guiliang Liu, Wei-Shi Zheng
+    venue: IEEE/CVF Conference on Computer Vision and Pattern Recognition
+    short_venue: CVPR 2026 Highlight
+    year: 2026
+    image: ./assets/img/publications/cyclemanip.png
+    video: ./assets/video/publications/cyclemanip.mp4
+    summary: Achieving cyclic manipulation tasks in an end-to-end imitation manner, without relying on auxiliary models or incurring heavy computational overhead.
+    abs: https://arxiv.org/abs/2512.01022
+    pdf: https://arxiv.org/pdf/2512.01022
+    page: https://isee-laboratory.github.io/CycleManip/
+    code: https://github.com/iSEE-Laboratory/CycleManip
+    selected: true
+  - title: "OmniDexGrasp: Generalizable Dexterous Grasping via Foundation Model and Force Feedback"
+    authors: Yi-Lin Wei*, Zhexi Luo*, Yuhao Lin, Mu Lin, Zhizhao Liang, Shuoyu Chen, Wei-Shi Zheng
+    venue: IEEE International Conference on Robotics and Automation
+    short_venue: ICRA 2026
+    year: 2026
+    image: ./assets/img/publications/omnidex.png
+    video: ./assets/video/publications/omnidex.mp4
+    summary: A generalizable dexterous framework that achieves omni-capabilities in user prompting, dexterous embodiment, and grasping tasks.
+    abs: https://arxiv.org/abs/2510.23119
+    pdf: https://arxiv.org/pdf/2510.23119
+    page: https://isee-laboratory.github.io/OmniDexGrasp/
+    code: https://github.com/iSEE-Laboratory/OmniDexGrasp
+    selected: true
+  - title: "AffordDexGrasp: Open-set Language-guided Dexterous Grasp with Generalizable-Instructive Affordance"
+    authors: Yi-Lin Wei*, Mu Lin*, Yuhao Lin, Jian-Jian Jiang, Xiao-Ming Wu, Liang-An Zeng, Wei-Shi Zheng
+    venue: IEEE/CVF International Conference on Computer Vision
+    short_venue: ICCV 2025
+    year: 2025
+    image: ./assets/img/publications/afforddex_image.png
+    video: ./assets/video/publications/affordex.mp4
+    summary: Open-Set Language-guided dexterous grasp based on generalizable-instructive Affordance.
+    abs: https://arxiv.org/abs/2503.07360
+    pdf: https://arxiv.org/pdf/2503.07360
+    page: https://isee-laboratory.github.io/AffordDexGrasp/index.html
+  - title: "BiDexGrasp: Coordinated Bimanual Dexterous Grasps across Object Geometries and Sizes"
+    authors: Mu Lin*, Yi-Lin Wei*, Jiaxuan Chen, Yuhao Lin, Shuoyu Chen, Jiangran Lyu, Jiayi Chen, Yansong Tang, He Wang, Wei-Shi Zheng
+    venue: arXiv
+    short_venue: arXiv 2026
+    year: 2026
+    image: ./assets/img/publications/bidexgrasp1.png
+    video: ./assets/video/publications/bidexgrasp.mp4
+    summary: A large-scale bimanual dexterous grasping dataset and a geometry-size-adaptive grasping generation model.
+    abs: https://arxiv.org/abs/2604.06589
+    pdf: https://arxiv.org/pdf/2604.06589
+    page: https://frenkielm.github.io/BiDexGrasp.github.io/
+  - title: "TacCap: A Wearable FBG-Based Tactile Sensor for Seamless Human-to-Robot Skill Transfer"
+    authors: Chengyi Xing*, Hao Li*, Yi-Lin Wei, Tian-Ao Ren, Tianyu Tu, Yuhao Lin, Elizabeth Schumann, Wei-Shi Zheng, Mark Cutkosky
+    venue: IEEE/RSJ International Conference on Intelligent Robots and Systems
+    short_venue: IROS 2025
+    year: 2025
+    image: ./assets/img/publications/taccap_image.png
+    video: ./assets/video/publications/taccap.mp4
+    summary: A wearable FBG-Based tactile sensor which can transfered form human to robot.
+    abs: https://arxiv.org/abs/2503.01789
+    pdf: https://arxiv.org/pdf/2503.01789
+    page: https://taccap.github.io/
+preprint: []
+workshop: []
+journal: []

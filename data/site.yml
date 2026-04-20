@@ -1,0 +1,86 @@
+name: Yuhao Lin
+email: linyh96@mail2.sysu.edu.cn
+footer_note: Academic homepage.
+footer_copy: ""
+navigation:
+  - id: about
+    label: About
+  - id: publications
+    label: Publications
+  - id: honors
+    label: Honors
+hero:
+  image: ./assets/img/hero/light/1.png
+  backgrounds:
+    light:
+      - src: ./assets/img/hero/light/0.jpg
+        position: center 60%
+      - src: ./assets/img/hero/light/1.png
+        position: center center
+      - src: ./assets/img/hero/light/5.jpg
+        position: center 60%
+      - src: ./assets/img/hero/light/2.jpg
+        position: center 58%
+      - src: ./assets/img/hero/light/3.jpg
+        position: center 88%
+      - src: ./assets/img/hero/light/4.jpg
+        position: center 60%
+    dark:
+      - src: ./assets/img/hero/dark/1.jpg
+        position: center 65%
+      - src: ./assets/img/hero/dark/2.jpg
+        position: center 63%
+      - src: ./assets/img/hero/dark/3.jpg
+        position: center 78%
+      - src: ./assets/img/hero/dark/4.jpg
+        position: center 70%
+      - src: ./assets/img/hero/dark/5.jpg
+        position: center 53%
+
+  avatar: ./assets/img/personal-picture.jpg
+  actions:
+    - label: Google Scholar
+      href: https://scholar.google.com/citations?user=5O_sVmCXPUUC
+      variant: secondary
+  socials:
+    - label: Email
+      href: mailto:linyh96@mail2.sysu.edu.cn
+about:
+  eyebrow: About
+  heading: About
+  paragraphs:
+    - Hi! I am Yuhao Lin (林宇浩). I am currently a Master's student at the [Intelligence Science and System Lab (iSEE Lab)](https://isee-ai.cn/), [School of Computer Science and Engineering](https://cse.sysu.edu.cn/), [Sun Yat-sen University](https://www.sysu.edu.cn/), advised by Prof. [Wei-Shi Zheng](http://www.isee-ai.cn/~zhwshi/). Prior to this, I obtained my B.S. from the same school at Sun Yat-sen University.
+    - My research interests include Embodied AI and Robotics. Feel free to reach out if you are interested in collaboration or discussion.
+publications:
+  heading: Publications
+honors:
+  heading: Honors
+  items:
+    - year: 2024
+      title: "37 Interactive Entertainment Scholarship"
+    - year: 2025
+      title: "Outstanding Undergraduate Thesis, Sun Yat-sen University"
+footer_links: []
+
+author_links:
+  "Yi-Lin Wei": https://wyl2077.github.io/
+  "Mu Lin": https://frenkielm.github.io/
+  "Haoran Liao": https://liaohr9.github.io/
+  "Guiliang Liu": https://guiliang.me/
+  "Wei-Shi Zheng": https://www.isee-ai.cn/~zhwshi/
+  "Zhexi Luo": https://zhexiluo.github.io/
+  "Chengyi Xing": https://chengyi-xing.com/
+  "Hao Li": https://haolirobo.github.io/
+  "Dandan Zhang": https://profiles.imperial.ac.uk/d.zhang17
+  "Mark Cutkosky": https://profiles.stanford.edu/mark-cutkosky
+  "Jian-Jian Jiang": https://jianjian-jiang.github.io/
+  "Xiao-Ming Wu": https://dravenalg.github.io/
+  "Liang-An Zeng": https://www.lingan.art/
+  "Shuoyu Chen": https://github.com/Rain-Shuoyu
+  "Jiangran Lyu": https://jiangranlv.github.io/
+  "Jiayi Chen": https://jychen18.github.io/
+  "Yansong Tang": https://andytang15.github.io/
+  "He Wang": https://hughw19.github.io/
+  "Tian-Ao Ren": https://www.linkedin.cn/incareer/in/teoren/
+  "Tianyu Tu": https://www.linkedin.cn/incareer/in/tianyu-tu-b9b83a291/
+  "Elizabeth Schumann": https://music.stanford.edu/people/elizabeth-schumann
