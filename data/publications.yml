@@ -51,8 +51,8 @@ conference:
     page: https://isee-laboratory.github.io/AffordDexGrasp/index.html
   - title: "BiDexGrasp: Coordinated Bimanual Dexterous Grasps across Object Geometries and Sizes"
     authors: Mu Lin*, Yi-Lin Wei*, Jiaxuan Chen, Yuhao Lin, Shuoyu Chen, Jiangran Lyu, Jiayi Chen, Yansong Tang, He Wang, Wei-Shi Zheng
-    venue: arXiv
-    short_venue: arXiv 2026
+    venue: Conference on Robot Learning
+    short_venue: CoRL 2026
     year: 2026
     image: ./assets/img/publications/bidexgrasp1.jpg
     video: ./assets/video/publications/bidexgrasp.mp4
@@ -60,6 +60,18 @@ conference:
     abs: https://arxiv.org/abs/2604.06589
     pdf: https://arxiv.org/pdf/2604.06589
     page: https://frenkielm.github.io/BiDexGrasp.github.io/
+  - title: "DexGrasp-Zero: A Morphology-Aligned Policy for Zero-Shot Cross-Embodiment Dexterous Grasping"
+    authors: Yuliang Wu, Yanhan Lin, WengKit Lao, Yuhao Lin, Yi-Lin Wei, Wei-Shi Zheng, Ancong Wu
+    venue: "Robotics: Science and Systems"
+    short_venue: RSS 2026
+    year: 2026
+    image: ./assets/img/publications/dexgraspzero.jpg
+    video: ./assets/video/publications/dexgraspzero.mp4
+    summary: A morphology-aligned graph policy that transfers dexterous grasping to unseen robot hands zero-shot, without retraining or retargeting.
+    abs: https://arxiv.org/abs/2603.16806
+    pdf: https://arxiv.org/pdf/2603.16806
+    page: https://yliangwu.github.io/DexGrasp-Zero/docs/
+    code: https://github.com/YliangWu/DexGrasp-Zero-code
   - title: "TacCap: A Wearable FBG-Based Tactile Sensor for Seamless Human-to-Robot Skill Transfer"
     authors: Chengyi Xing*, Hao Li*, Yi-Lin Wei, Tian-Ao Ren, Tianyu Tu, Yuhao Lin, Elizabeth Schumann, Wei-Shi Zheng, Mark Cutkosky
     venue: IEEE/RSJ International Conference on Intelligent Robots and Systems
